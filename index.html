@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<style>
+	    body {
+		max-width: 600px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 20px;
+	    }
+
+	    input {
+		padding: 5px;
+		width: 100%;
+		box-sizing: border-box;
+	    }
+
+	    button {
+		width: 100%;
+		padding: 5px;
+	    }
+
+	    #forms>div {
+		margin-bottom: 25px;
+	    }
+
+	    .search #autocomplete {
+		background: #f1f1f1;
+	    }
+
+	    .search #autocomplete div {
+		border-bottom: 1px solid #d5d5d5;
+		display: block;
+		padding: 5px;
+		text-align: left;
+		cursor: pointer;
+	    }
+	    
+	    #words {
+		text-align: left;
+		margin-bottom: 20px;
+	    }
+	</style>
+    </head>
+    <body>
+	<div style="margin-bottom: 50px;">
+	    <p>
+	    Essa é uma demo para o artigo:
+	    <a target="_blank" href="https://gustv0.dev/autocomplete-usando-a-estrutura-de-dados-trie">Auto-complete usando a estrutura de dados Trie</a>
+	    </p>
+	    <p>Para ver o código fonte: <a target="_blank" href="https://github.com/gustv000/autocomplete-trie-live-example">https://github.com/gustv000/autocomplete-trie-live-example</a></p>
+	</div>
+	<div id="words">
+	    <p>Palavras adicionadas:</p>
+	    <div>abacate</div>
+	    <div>abacaxi</div>
+	    <div>abutre</div>
+	    <div>bola</div>
+	    <div>bolo</div>
+	    <div>bolao</div>
+	</div>
+	<div id="forms">
+	    <div class="insert">
+		<input type="text" id="insert" placeholder="Inserir palavra">
+		<button id="insert-button">Inserir</button>
+	    </div>
+
+	    <div class="search">
+		<input type="text" id="search" placeholder="Comece a digitar para buscar uma palavra">
+		<div id="autocomplete">
+		</div>
+		<button id="search-button">Buscar</button>
+	    </div>
+	</div>
+
+	<script src="trie.js"></script>
+    </body>
+</html>
